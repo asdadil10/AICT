@@ -89,14 +89,15 @@ footer
 .navbutton
 {
     border-radius: 20px;
-    border: 2px solid var(--neon-border);
+    border: 2px solid #00fbff22;
     background-color: var(--border-color);
-    color: var(--text-main);
+    color: var(--neon-accent);
     font-weight: 400;
     min-width: 15%;  
     transition: 0.3s;
     margin-inline: 5px;
-    box-shadow: inset 0 -1px 8px var(--neon-accent);
+    box-shadow: inset 0 -1px 8px #06b5d437;
+    padding-bottom: px;
 }
 .navbutton:hover
 {
@@ -107,7 +108,6 @@ footer
 {
     display: flex;
     justify-content: center;
-    border : 1px #000 solid;
 }
 .progress
 {
@@ -122,5 +122,5 @@ footer
 .progress:hover
 {
     background-color: #32435c;
-    box-shadow: inset 0 -6px 8px #068fd437;
+    box-shadow: inset 0 -6px 8px #06a0d452;
 }
