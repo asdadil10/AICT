@@ -38,6 +38,7 @@ h1
 body
 {
     background-color: var(--bg-main);
+    color:var(--text-main)
 }
 .card
 {
@@ -60,9 +61,13 @@ transition: 0.3s;
     margin:60px;
     padding-top: 25px;
     padding-bottom: 25px;
-    border-radius: 30px;
+    border-radius: 40px;
     min-width:480px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+#player
+{
+    margin:30px;
 }
 .row
 {
@@ -84,7 +89,8 @@ footer
 #musicpng
 {
     justify-self: center;
-    margin:15%;
+    margin-bottom: 5%;
+    margin:10%;
 }
 .navbutton
 {
@@ -109,6 +115,20 @@ footer
     display: flex;
     justify-content: center;
 }
+#homebtn
+{
+    margin-left:5%;
+    min-width: 0;
+    padding-bottom: 4px;
+    padding-inline: 7px;
+    border: 2px solid #00fbff0d;
+    box-shadow: inset 0 -1px 10px #06b5d41f;
+}
+#homebtn:hover
+{ 
+     border: 2px solid #00fbff34;
+    box-shadow: inset 0 -1px 10px #06b5d43f;
+}
 .progress
 {
     background-color: var(--border-color);
@@ -123,4 +143,42 @@ footer
 {
     background-color: #32435c;
     box-shadow: inset 0 -6px 8px #06a0d452;
+}
+.trackName
+{
+    display:flex;
+    justify-content: center;
+}
+/* --- CSS Page Switcher Logic --- */
+
+/* 1. Reset link styles so cards look normal */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Important: display: contents makes the <a> invisible to the layout, 
+       so your .card styles and flexbox margins still work perfectly */
+    display: contents; 
+}
+
+/* 2. Hide the Player page by default */
+#player {
+    display: none;
+}
+
+/* 3. Show the Player page when it is the 'target' (URL ends in #player) */
+#player:target {
+    display: block;
+    animation: fadeEffect 0.5s; /* Optional: Adds a smooth fade-in */
+}
+
+/* 4. Hide the Home page when the Player is active */
+/* Note: The :has() selector checks if the body contains an active #player target */
+body:has(#player:target) #home {
+    display: none;
+}
+
+/* Optional: Animation Keyframes */
+@keyframes fadeEffect {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
