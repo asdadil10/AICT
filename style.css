@@ -89,8 +89,8 @@ footer
 #musicpng
 {
     justify-self: center;
-    margin-bottom: 5%;
-    margin:10%;
+    margin-bottom:12%;
+    margin-top: 2%;
 }
 .navbutton
 {
@@ -129,25 +129,25 @@ footer
      border: 2px solid #00fbff34;
     box-shadow: inset 0 -1px 10px #06b5d43f;
 }
-.progress
+.progress-bar-container
 {
-    background-color: var(--border-color);
+    background-color: #bd193c;
     margin-left: 20px;
     margin-right:20px;
     transition: 0.3s;
-    box-shadow: inset 0 -6px 8px #06b5d437;
+    box-shadow: inset 0 -6px 8px #d4d00637;
     border-radius: 10px;
-    border: 1px solid #00fbff14;
+    border: 1px solid #ff00ff44;
 }
-.progress:hover
+.progress-bar-container:hover
 {
-    background-color: #32435c;
-    box-shadow: inset 0 -6px 8px #06a0d452;
+    box-shadow: inset 0 -6px 8px #c6d40652;
 }
 .trackName
 {
     display:flex;
     justify-content: center;
+    cursor:default;
 }
 a {
     text-decoration: none;
@@ -163,4 +163,24 @@ a {
 }
 body:has(#player:target) #home {
     display: none;
+}
+#progressBar {
+    width: 67%; /* Starts at 0, will be updated by JS */
+    background-color: #f8ce00ca;
+    border-radius: 10px;
+    transition: width 0.1s linear;
+    box-shadow: inset 0 -3px 5px #d4090668;
+    transition: 0.3s;
+}
+#progressBar:hover{
+    background-color: #f8d700ca;
+}
+.time-display {
+    padding-left: 20px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    opacity: 60%;
+    margin-top: 5px;
+    cursor:default;
+    font-family: Space Grotesk;
 }

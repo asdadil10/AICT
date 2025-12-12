@@ -42,15 +42,22 @@
 <!--music player div-->
 
 <div class="page" id="player">
+    <audio src="No Love - Shubh.mp3" id="myAudio"></audio>
 <button id="homebtn"class="navbutton">🏠︎</button>
 <div id="musicpng">
     <img src="music.png" height=150 alt="music.png">
 </div>
+
 <div class="trackName" id="trackname">
-    <p>Music Name</p>
+    <p>Music Name</p> 
 </div>
-<div class="container pb-5">
-<div class="progress"></div>
+<div class="container mb-2">
+    <div class="progress-bar-container">
+        <div class="progress" id="progressBar"></div>
+    </div>
+        <div class="time-display">
+            <span id="currentTime">0:00</span> / <span id="totalDuration">0:00</span>
+        </div>
 </div>
 <div class="musicnav">
 <button id="leftbtn" class="navbutton">I◁</button>
@@ -59,8 +66,6 @@
 </div>
 
 </div>
-
-
 </div>
     <footer>AICT Project Fall-2025 BSCS-I-B Group 6
     </footer> 
