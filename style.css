@@ -149,36 +149,18 @@ footer
     display:flex;
     justify-content: center;
 }
-/* --- CSS Page Switcher Logic --- */
-
-/* 1. Reset link styles so cards look normal */
 a {
     text-decoration: none;
     color: inherit;
-    /* Important: display: contents makes the <a> invisible to the layout, 
-       so your .card styles and flexbox margins still work perfectly */
     display: contents; 
 }
-
-/* 2. Hide the Player page by default */
 #player {
     display: none;
 }
-
-/* 3. Show the Player page when it is the 'target' (URL ends in #player) */
 #player:target {
     display: block;
-    animation: fadeEffect 0.5s; /* Optional: Adds a smooth fade-in */
+    animation: fadeEffect 0.5s; 
 }
-
-/* 4. Hide the Home page when the Player is active */
-/* Note: The :has() selector checks if the body contains an active #player target */
 body:has(#player:target) #home {
     display: none;
-}
-
-/* Optional: Animation Keyframes */
-@keyframes fadeEffect {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
