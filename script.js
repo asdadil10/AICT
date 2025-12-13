@@ -109,8 +109,8 @@ audio.onloadedmetadata = function() {
 audio.ontimeupdate = function() 
 {
     if (!isNaN(audio.duration)) {
-        const progressPercent = (audio.currentTime / audio.duration) * 100;
-        progressBar.style.width = progressPercent + '%';
+        const progressPercent = (audio.currentTime / audio.duration) * 96.5;
+        progressBar.style.width = progressPercent + 3.5 + '%'; //tweak to fix the weird visual behaviour of progress bar
         currentTimeEl.textContent = formatTime(audio.currentTime);
     }
 };
@@ -118,10 +118,9 @@ audio.ontimeupdate = function()
 progressBarContainer.onclick = function(e) {
     if (!isNaN(audio.duration)) {
         // Calculate click position relative to the container width
-        const containerWidth = this.clientWidth;
+        const containerWidth = this.clientWidth-(this.clientWidth*0.035); //tweaking ui
         const clickX = e.clientX- this.getBoundingClientRect().left;
-        
-        const seekTime = (clickX / containerWidth) * audio.duration;
+        const seekTime = ((clickX) / containerWidth) * audio.duration-3.5; //tweaking ui
         audio.currentTime = seekTime;
     }
 };

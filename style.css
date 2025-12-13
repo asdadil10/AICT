@@ -38,7 +38,8 @@ h1
 body
 {
     background-color: var(--bg-main);
-    color:var(--text-main)
+    color:var(--text-main);
+    user-select: none;
 }
 .card
 {
@@ -52,6 +53,7 @@ margin: 5px;
 border: 2px solid var(--border-color);
 border-radius: 18px;
 transition: 0.5s;
+cursor: pointer;
 }
 .page
 {
@@ -160,6 +162,7 @@ footer
 .progress-bar-container:hover
 {
     box-shadow: inset 0 -6px 8px #c6d40652;
+    cursor : pointer;
 }
 .trackName
 {
@@ -189,6 +192,7 @@ body:has(#player:target) #home {
     transition: width 0.1s linear;
     box-shadow: inset 0 -3px 5px #d4090668;
     transition: 0.3s;
+    min-width: 3.5%;
 }
 #progressBar:hover{
     background-color: #f8d700ca;
