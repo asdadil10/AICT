@@ -16,6 +16,12 @@
 --neon-border:#06b5d4e1;
     --neon-accent: #06b6d4;         /* Cyan Accent */
 }
+
+    img
+    {
+        width: 25vh;
+        height: 25vh;
+    }
 .heading1{
     margin-top: 30px;
     display:flex;
@@ -163,7 +169,7 @@ footer
 }
 .navbutton
 {
-    border-radius: 20px;
+    border-radius: 20vmax;
     border: 2px solid #00fbff22;
     background-color: var(--border-color);
     color: var(--neon-accent);
@@ -173,6 +179,7 @@ footer
     margin-inline: 5px;
     box-shadow: inset 0 -1px 8px #06b5d437;
     padding-bottom: 2px;
+    font-size: 1.67vmax;
 }
 .navbutton:hover
 {
@@ -186,10 +193,10 @@ footer
 }
 #homebtn
 {
-    margin-left:5%;
+    margin-left:3%;
     min-width: 0;
     padding-bottom: 4px;
-    padding-inline: 7px;
+    padding-inline: 0.6vmax;
     border: 2px solid #00fbff0d;
     box-shadow: inset 0 -1px 10px #06b5d41f;
 }
@@ -197,6 +204,22 @@ footer
 { 
      border: 2px solid #00fbff34;
     box-shadow: inset 0 -1px 10px #06b5d43f;
+}
+#creditsbtn
+{
+    min-width: 3vmax;
+    max-height: 3vmax;
+    position: absolute;
+    margin-left: 42vw;
+    color: var(--accent-color);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 2px solid #00ff551f;
+    box-shadow: inset 0 -1px 10px #06d46932;
+}
+#creditsbtn:hover{
+    
+     border: 2px solid #00ffa234;
+    box-shadow: inset 0 -1px 6px #06d4935c;
 }
 .progress-bar-container
 {
@@ -248,30 +271,14 @@ body:has(#player:target) #home {
 }
 .time-display {
     padding-left: 20px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
     opacity: 60%;
     margin-top: 5px;
     cursor:default;
     font-family: Space Grotesk;
 }
-#creditsbtn
-{
-    min-width: 30px;
-    max-height: 30px;
-    position: absolute;
-    margin-left: 400px;
-    padding-top: 1.6px;
-    color: var(--accent-color);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border: 2px solid #00ff551f;
-    box-shadow: inset 0 -1px 10px #06d46932;
-}
-#creditsbtn:hover{
-    
-     border: 2px solid #00ffa234;
-    box-shadow: inset 0 -1px 6px #06d4935c;
-}
+
 p{
     margin-top: 2px;
 }
@@ -282,6 +289,9 @@ p{
     border: 4px solid;
     font-size: 5vw;
     padding-inline: 0;
+    
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 .page{
     min-width: 90%;
@@ -332,4 +342,33 @@ h1{
     position: fixed;
     align-self: center;
 }
+}
+@media(min-width:601px)
+{
+    .page
+    {
+        position:fixed;
+        top:20vh;
+        font-size: 2rem;
+        width: 50vw;
+        padding-inline: 1vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    #player
+    {
+        top:15vh;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+    .card{
+        padding-top: 5vh;
+        font-size: 2vw;
+        padding-bottom: 5vh;
+        border-width: 0.3vw;
+    }
+    h1
+    {
+        font-size: 4vmax;
+    }
 }
