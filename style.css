@@ -206,3 +206,23 @@ body:has(#player:target) #home {
     cursor:default;
     font-family: Space Grotesk;
 }
+#creditsbtn
+{
+    min-width: 30px;
+    max-height: 30px;
+    position: absolute;
+    margin-left: 400px;
+    padding-top: 1.6px;
+    color: var(--accent-color);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 2px solid #00ff551f;
+    box-shadow: inset 0 -1px 10px #06d46932;
+}
+#creditsbtn:hover{
+    
+     border: 2px solid #00ffa234;
+    box-shadow: inset 0 -1px 6px #06d4935c;
+}
+p{
+    margin-top: 2px;
+}
