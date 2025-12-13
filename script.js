@@ -203,11 +203,11 @@ motivated.onclick= function()
 };
 function openplayer()
 {
+    gettrackname();
 window.open("#player", "_self");
 let playerDiv=document.getElementById("player");
     playerDiv.style.display = 'block';
     playaudio();
-    gettrackname();
 }
 // to switch back to home
 let homebtn=document.getElementById("homebtn")
