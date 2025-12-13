@@ -58,7 +58,7 @@ cursor: pointer;
 .page
 {
     justify-self: center;
-    background: linear-gradient(135deg, #1e293b 0%, #1a2a4e 25%, #1a3a3a 50%, #1a2a4e 75%, #1e293b 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #1a2a4e 25%, #1a323a 50%, #1a2a4e 75%, #1e293b 100%);
     background-size: 400% 400%;
     margin:60px;
     padding-top: 25px;
@@ -76,30 +76,72 @@ cursor: pointer;
     display: flex;
 justify-content: center;
 }
+#happycard
+{
+    color: rgb(184, 216, 255);
+    transition: 0.5s;
+    background: radial-gradient(circle, var(--bg-secondary) 45%, rgba(27, 102, 193, 0.08) 140%);
+    background-size: 100% 100%;
+    background-position: center;
+    border-color: rgba(27, 102, 193, 0.25);
+}
 #happycard:hover
 {
     color:#069ad4;
         box-shadow: inset 0 0 20px #06bfd411;
     box-shadow: 0 0 20px #06bfd411;
     border-color: #25477a;
-}#sadcard:hover
+    background-size: 125% 125%;
+}
+#sadcard
+{
+    color: rgb(255, 184, 189);
+    transition: 0.5s;
+    background: radial-gradient(circle, var(--bg-secondary) 25%, rgba(206, 24, 82, 0.25) 180%);
+    background-size: 100% 100%;
+    background-position: center;
+    border-color: rgba(212, 6, 54, 0.249);
+}
+#sadcard:hover
 {
     color:#ce185b;
     box-shadow: inset 0 0 20px #d4064e11;
     box-shadow: 0 0 20px #d4065c11;
     border-color: #7a2535;
-}#energeticcard:hover
+    background-size: 125% 125%;
+
+}#energeticcard
+{
+    color: rgb(255, 243, 219);
+    transition: 0.5s;
+    background: radial-gradient(circle, var(--bg-secondary) 25%, rgba(212, 198, 6, 0.15) 180%);
+    background-size: 100% 100%;
+    background-position: center;
+    border-color: rgba(212, 198, 6, 0.25);
+}
+#energeticcard:hover
 {
     color:#d4c606;
     box-shadow: inset 0 0 20px #d4bf0611;
     box-shadow: 0 0 20px #d0d40611;
     border-color: #7a7625;
+    background-size: 125% 125%;
+}#motivatedcard
+{
+    color: rgb(241, 219, 255);
+    transition: 0.5s;
+    background: radial-gradient(circle, var(--bg-secondary) 25%, rgba(147, 6, 212, 0.15) 180%);
+    background-size: 100% 100%;
+    background-position: center;
+    border-color: rgba(147, 6, 212, 0.25);
 }#motivatedcard:hover
 {
     color:#9306d4;
     box-shadow: inset 0 0 20px #d406d011;
     box-shadow: 0 0 20px #d406cd11;
     border-color: #9306d4cc;
+    background-size: 125% 125%;
+
 }
 footer
 {

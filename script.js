@@ -8,7 +8,6 @@ let totalDurationEl = document.getElementById("totalDuration");
 let nextbtn = document.getElementById("rightbtn");
 let previousbtn = document.getElementById("leftbtn");
 let creditsbtn = document.getElementById("creditsbtn");
-
 let happy = document.getElementById("happycard");
 let sad = document.getElementById("sadcard");
 let energetic = document.getElementById("energeticcard");
@@ -18,8 +17,11 @@ let creditsinfo;
 let vibe = 0; //0=happy,1=sad,2=energetic,3=motivated
 const tracks = [
     "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/018/never-give-up-on-loving-you-1764896468-Csbo2JmIso.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/758/on-and-on-1727308858-tLh4ktBdt5.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/750/heroes-tonight-x-dreams-pt-ii-mashup-1725969652-gPmvlvBBTP.mp3",
+    
     "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/017/scars-1764896463-xsRdrCuldh.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/012/fireflies-1764032464-3c4tlYQgRQ.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/969/round-around-1758585663-KzABbY3nfl.mp3",
+    
     "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/022/lost-pt-ii-1765501267-X9EsqWRb8U.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/021/see-the-sun-1765414865-S9PH5x4mCY.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/019/needed-you-1765242065-eBG1mS8tyL.mp3",
+    
     "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/959/all-weve-ever-known-ft-fred-v-immy-odon-1756476063-giqRRYJNfs.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/974/1759489943_WNu03JmYAO_LANCELOT-ACIGODE-SXYGX---Loop-NCS-Release.mp3", "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/002/004/mortals-rameses-b-remixs-1762477276-EqCZQdL0px.mp3"
 ];
 const tracksJson = [
