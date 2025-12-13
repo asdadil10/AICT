@@ -1,4 +1,5 @@
 let pausebtn=document.getElementById("centerbtn");
+let player=document.getElementById("player");
 let audio=document.getElementById("myAudio");
 let progressbar=document.getElementById("progressBar");
 let progressBarContainer = document.querySelector(".progress-bar-container"); // The outer track
@@ -103,6 +104,13 @@ audio.onloadedmetadata = function() {
     const fileName = filePath.substring(filePath.lastIndexOf('/') + 1); // Extract file name
     document.getElementById("trackname").querySelector('p').textContent = fileName;
     trackname=fileName;
+    let currentindex = tracks.indexOf(trackname);
+    if (currentindex==0||currentindex==3||currentindex==6||currentindex==9)
+    {
+       previousbtn.style.color='var(--text-muted)';
+    }
+    else
+        previousbtn.style.color='var(--neon-accent)';
 };
 
 // Update Progress Bar and Current Time
@@ -128,24 +136,32 @@ happy.onclick= function()
 {
     vibe=0;
     openplayer();
+    player.style.background="linear-gradient(135deg, #1e2f3bff 0%, #1a354eff 25%, #1a3a3a 100%, #1a2a4e 75%, #1e293b 100%)";
+    player.style.backgroundSize="400% 400%";
 };
 sad.onclick= function()
 {
     vibe=1;
     audio.src=tracks[3];
-    openplayer();
+    openplayer();    
+    player.style.background="linear-gradient(135deg, #1e203bff 50%, #4e1a2dff 15%, #1a293aff 50%, #1a2a4e 75%, #1e293b 100%)";
+    player.style.backgroundSize="200% 200%";
 };
 energetic.onclick= function()
 {
     audio.src=tracks[6];
     vibe=2;
-    openplayer();
+    openplayer();    
+    player.style.background="linear-gradient(135deg, #1e273bff 10%, #4e451aff 100%, #1a293aff 50%, #1a2a4e 75%, #1e293b 100%)";
+    player.style.backgroundSize="200% 200%";
 };
 motivated.onclick= function()
 {
     audio.src=tracks[9];
     vibe=3;
     openplayer();
+    player.style.background="linear-gradient(135deg, #1e273bff 10%, #4e1a46ff 100%, #1a293aff 50%, #1a2a4e 75%, #1e293b 100%)";
+    player.style.backgroundSize="200% 200%";
 };
 function openplayer()
 {
@@ -182,15 +198,17 @@ previousbtn.onmouseenter= function ()
 {
     let currentindex = tracks.indexOf(trackname);
     if (currentindex==0||currentindex==3||currentindex==6||currentindex==9)
-        previousbtn.style.cursor='not-allowed';
-    else
+        {
+            previousbtn.style.cursor='not-allowed';
+        }
+        else
         previousbtn.style.cursor="pointer";
 }
 audio.onplaying=function()
 {
-pausebtn.textContent = "I I"; // Set to Pause icon
+    pausebtn.textContent = "I I"; // Set to Pause icon
 }
 audio.onpause=function()
 {
-        pausebtn.textContent = "▷"; // Set to Play icon
+    pausebtn.textContent = "▷"; // Set to Play icon
 }
