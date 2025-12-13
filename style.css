@@ -306,10 +306,10 @@ h1{
     min-height:2.85rem;
     min-width: 2.85rem;
     position: absolute;
-    right:1.5rem;
     padding-top:0.2rem;
     padding-inline: 0.78rem;
-    bottom: 1.51rem;
+    top:1.5rem;
+    right:1.5rem;
 }
 .trackName
 {
@@ -319,7 +319,6 @@ h1{
 {
     font-size: 1.5rem;
     border-radius: 100px;
-    padding-bottom: 0.167rem;
     padding-inline: 5%;
 }
 }
