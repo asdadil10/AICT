@@ -301,7 +301,7 @@ p{
 }
 #player
 {
-    top:46%;
+    top:46%!important;
 }
 h1{
     font-size: 3rem;
