@@ -37,7 +37,7 @@ h1
 }
 body
 {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     background-color: var(--bg-main);
@@ -291,7 +291,7 @@ p{
 }
 #player
 {
-    top:45%;
+    top:50%;
 }
 h1{
     font-size: 3rem;
