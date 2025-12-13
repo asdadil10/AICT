@@ -26,7 +26,7 @@ function playaudio()
 
 audio.onended = function() 
 {
-    pausebtn.textContent = "▷"; // Reset to play icon
+    pausebtn.textContent = "▷"; // for that glitchy animation
     audio.currentTime = 0;
     currentTimeEl.textContent='0:00';
 
@@ -119,7 +119,7 @@ progressBarContainer.onclick = function(e) {
     if (!isNaN(audio.duration)) {
         // Calculate click position relative to the container width
         const containerWidth = this.clientWidth;
-        const clickX = e.clientX      - this.getBoundingClientRect().left;
+        const clickX = e.clientX- this.getBoundingClientRect().left;
         
         const seekTime = (clickX / containerWidth) * audio.duration;
         audio.currentTime = seekTime;
@@ -151,7 +151,6 @@ motivated.onclick= function()
 function openplayer()
 {
 window.open("#player", "_self");
-pausebtn.textContent = "I I"; // Set to Pause icon
 let playerDiv=document.getElementById("player");
     playerDiv.style.display = 'block';
     playaudio();
