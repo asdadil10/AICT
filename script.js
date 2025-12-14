@@ -57,12 +57,56 @@ function gettrackname()
             trackname= "Unknown Track"; // If no match is found.
         }
     document.getElementById("trackname").querySelector('p').textContent = trackname;
-   
 }
-
 creditsbtn.onclick=function()
 {
-alert(creditsinfo);
+    displaycredits();
+}
+
+function displaycredits(e=0)
+{
+    if (e)
+        newdiv.remove();
+    else if (document.getElementById('credits'))
+        return;
+    else
+        {
+    newdiv = document.createElement('div');
+    newdiv.id = 'credits';
+    newdiv.style.position = 'fixed';
+    newdiv.style.bottom = '60%';
+    newdiv.style.left = '50%';
+    newdiv.style.transform = 'translate(-50%, 50%)';
+    newdiv.style.backgroundColor = 'rgba(11, 11, 21, 0.78)';
+    newdiv.style.color = 'white';
+    newdiv.style.padding = '2vw';
+    newdiv.style.borderRadius = '2vw';
+    newdiv.style.zIndex = '100';
+    newdiv.style.maxWidth = '300px';
+    newdiv.style.fontSize = '14px';
+    newdiv.textContent = creditsinfo;
+    player.appendChild(newdiv);
+    closebtn = document.createElement('span');
+    closebtn.textContent = '×';
+    closebtn.style.position = 'absolute';
+    closebtn.style.top = '5px';
+    closebtn.style.right = '10px';
+    closebtn.style.cursor = 'pointer';
+    closebtn.style.fontSize = '18px';
+    closebtn.onclick = function() {
+        newdiv.style.opacity = '0';
+        newdiv.style.transition = 'opacity 0.5s'; 
+        setTimeout(function() {
+        if (newdiv) {
+            newdiv.remove();
+        }
+    }, 500);
+    };
+    setTimeout(function() {
+        closebtn.onclick();
+    }, 4500); // Remove after 4.5 seconds
+    newdiv.appendChild(closebtn);
+        }
 }
 function playaudio()
 {
@@ -134,8 +178,7 @@ document.addEventListener('keydown', function(event) {
         event.preventDefault(); 
         
         // Only run the pauseplay function if the player is currently visible
-        const playerDiv = document.getElementById('player');
-        if (playerDiv.style.display !== 'none') {
+        if (player.style.display !== 'none') {
              pauseplay();
         }
     }
@@ -215,13 +258,13 @@ let playerDiv=document.getElementById("player");
 let homebtn=document.getElementById("homebtn")
 homebtn.onclick=function gohome()
 {
+    displaycredits(1);
 window.open("#", "_self");
 audio.pause();
 pausebtn.textContent="▷";
-let playerDiv=document.getElementById("player");
-    playerDiv.style.display = 'none';
-    
+    player.style.display = 'none';
     audio.src=tracks[0];
+
 };
 nextbtn.onclick=playnexttrack;
 previousbtn.onclick=function(){
