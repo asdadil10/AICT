@@ -80,17 +80,27 @@ function displaycredits(e=0)
     newdiv.style.backgroundColor = 'rgba(11, 11, 21, 0.78)';
     newdiv.style.color = 'white';
     newdiv.style.padding = '2vw';
+    newdiv.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
     newdiv.style.borderRadius = '2vw';
     newdiv.style.zIndex = '100';
-    newdiv.style.maxWidth = '300px';
-    newdiv.style.fontSize = '14px';
+   // newdiv.style.maxWidth = '300px';
+    newdiv.style.fontSize = '18px';
     newdiv.textContent = creditsinfo;
+    newdiv.style.userSelect = 'text';
+    newdiv.style.whiteSpace = 'pre-wrap'; // Preserves newlines and wraps text
     player.appendChild(newdiv);
     closebtn = document.createElement('span');
     closebtn.textContent = '×';
     closebtn.style.position = 'absolute';
-    closebtn.style.top = '5px';
-    closebtn.style.right = '10px';
+    closebtn.style.color = 'lightred';
+    closebtn.style.fontWeight = 'bold';
+    closebtn.style.borderRadius = '50%';
+    closebtn.style.padding = '0px 8px';
+    closebtn.style.border = '1px solid red';
+    closebtn.style.paddingBottom = '2px';
+    closebtn.style.backgroundColor = "rgba(255, 0, 0, 0.2)";
+    closebtn.style.top = '-14px';
+    closebtn.style.right = '-14px';
     closebtn.style.cursor = 'pointer';
     closebtn.style.fontSize = '18px';
     closebtn.onclick = function() {
@@ -102,9 +112,6 @@ function displaycredits(e=0)
         }
     }, 500);
     };
-    setTimeout(function() {
-        closebtn.onclick();
-    }, 4500); // Remove after 4.5 seconds
     newdiv.appendChild(closebtn);
         }
 }

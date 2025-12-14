@@ -349,9 +349,18 @@ h1{
     position: fixed;
     align-self: center;
 }
+
+    #credits
+    {
+        max-width: 300px;
+    }
 }
 @media(min-width:601px)
 {
+    #credits
+    {
+        max-width: 600px;
+    }
     .page
     {
         position:fixed;
@@ -395,5 +404,10 @@ h1{
     #player
     {
         top:10vh
+    }
+    
+    #credits
+    {
+        max-width: 500px;
     }
 }
