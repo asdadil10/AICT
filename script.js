@@ -201,6 +201,11 @@ audio.onloadedmetadata = function() {
     }
     else
         previousbtn.style.color='var(--neon-accent)';
+    if (document.getElementById('credits'))
+    {
+    document.getElementById('credits').textContent = creditsinfo;
+    document.getElementById('credits').appendChild(closebtn);
+    }
 };
 
 // Update Progress Bar and Current Time
