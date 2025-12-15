@@ -37,9 +37,9 @@ const tracksJson = [
     { "src": tracks[7], "name": "See The Sun","credits":"Song: Abstrakt, weloveyouspydee - See The Sun\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/SEETHESUN\nWatch: ncs.lnk.to/SEETHESUNAT/youtube" },
     { "src": tracks[8], "name": "Needed You by NOON","credits":"Song: NOON - Needed You\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/neededyou\nWatch: ncs.lnk.to/neededyouAT/youtube" },
     
-    { "src": tracks[9], "name": "All We've Ever Known (ft. Fred V & Immy Odon)","credits":"Song: Cartoon - All We've Ever Known (ft. Fred V & Immy Odon)\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/allweveeverknown\nWatch: ncs.lnk.to/allweveeverknownAT/youtube" },
+    { "src": tracks[9], "name": "All We've Ever Known (ft. Fred V & Immy Odon)","credits":"Song: Cartoon - All We've Ever Known (ft. Fred V & Immy Odon)\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/allweveeverknown\nWatch: ncs.lnk.to/allweveeverknown\nAT/youtube" },
     { "src": tracks[10], "name": "LOOP","credits":"Song: LANCELOT, ACIGODE, SXYGX - Loop\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/loop\nWatch: ncs.lnk.to/loopAT/youtube" },
-    { "src": tracks[11], "name": "Mortals (Rameses B Remix)","credits":"Song: Warriyo - Mortals (Rameses B Remix)\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/mortalsramesesbremix\nWatch: ncs.lnk.to/mortalsramesesbremixAT/youtube" },
+    { "src": tracks[11], "name": "Mortals (Rameses B Remix)","credits":"Song: Warriyo - Mortals (Rameses B Remix)\nMusic provided by NoCopyrightSounds\nFree Download/Stream: ncs.io/mortalsramesesbremix\nWatch: ncs.lnk.to/mortals\nramesesbremixAT/youtube" },
 
 ];
 function gettrackname()
