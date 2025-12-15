@@ -88,7 +88,7 @@ function displaycredits(e=0)
     newdiv.textContent = creditsinfo;
     newdiv.style.userSelect = 'text';
     newdiv.style.whiteSpace = 'pre-wrap'; // Preserves newlines and wraps text
-newtext.style.overflowWrap = 'break-word'; // Forces long URLs to break onto the next line
+newdiv.style.overflowWrap = 'break-word'; // Forces long URLs to break onto the next line
     player.appendChild(newdiv);
     closebtn = document.createElement('span');
     closebtn.textContent = '×';
