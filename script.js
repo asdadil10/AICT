@@ -66,7 +66,10 @@ creditsbtn.onclick=function()
 function displaycredits(e=0)
 {
     if (e)
+    {    if (document.getElementById('credits'))
         newdiv.remove();
+    return;
+    }
     else if (document.getElementById('credits'))
         return;
     else
