@@ -354,6 +354,11 @@ h1{
     {
         max-width: 300px;
     }
+    #credits span
+    {
+        min-width: 30px;
+        font-family: Courier;
+    }
 }
 @media(min-width:601px)
 {
